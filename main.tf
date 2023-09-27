@@ -14,7 +14,7 @@ role_arn = "arn:aws:iam::268003200000:role/terraform"
 }
 variable "mynewkey" {
   type    = string
-  default = "mynewkey"
+  default = "mynewkeyset"
 }
 resource "aws_security_group" "demo-sg" {
   name = "sec-grp"
