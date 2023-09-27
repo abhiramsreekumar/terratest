@@ -11,7 +11,7 @@ provider "aws" {
 }
 variable "mynewkey" {
   type    = string
-  default = "mynewkey"
+  default = "mynewkeys"
 }
 resource "aws_security_group" "demo-sg" {
   name = "sec-grp"
