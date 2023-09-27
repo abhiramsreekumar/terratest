@@ -7,6 +7,10 @@ terraform {
 }
 provider "aws" {
   region  = "us-east-1"
+assume_role {
+role_arn = "arn:aws:iam::268003200000:role/terraform"
+
+}
 }
 variable "mynewkey" {
   type    = string
