@@ -20,19 +20,7 @@ pipeline {
                 }   
             }
         }
-       stage('Create PR') {
-            steps {
-               sh 'git checkout main'
-               sh 'git pull origin main'
-               sh 'git push -u origin main'
-               sh 'git checkout test'
-               sh 'git pull origin test'
-                script{
-               echo "Output: ${output}"
-                }
-               sh "gh pr create --title '${env.output}' --body 'Pull request body'"
-            }
-        }
+       
     }
     post {
         always {
